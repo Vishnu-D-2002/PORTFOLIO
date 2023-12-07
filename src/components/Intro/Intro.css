@@ -1,0 +1,53 @@
+#left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+#end {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.rounded-image {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    position: relative;
+    animation: moveUpDown 2s infinite alternate;
+    transition: transform 0.3s ease-in-out;
+}
+
+#center{
+    display: flex;
+}
+
+.rounded-image:hover {
+    animation: scaleUp 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+@keyframes moveUpDown {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(20px);
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+}
