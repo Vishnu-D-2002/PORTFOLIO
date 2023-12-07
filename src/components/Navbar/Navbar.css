@@ -31,6 +31,7 @@ li {
 }
 
 #portfolio {
+    text-align: center;
     font-size: 30px;
     padding-left: 10px;
     text-shadow:
@@ -39,7 +40,7 @@ li {
         0px 0px 30px rgb(8, 175, 246),
         0px 0px 40px rgb(8, 175, 246),
         0px 0px 50px rgb(8, 175, 246);
-
+    color: rgb(204, 217, 233);
 }
 
 #checkbox {
@@ -93,12 +94,43 @@ li {
     .bars {
         display: none;
     }
+
+    
 }
 
-
 @media (max-width: 768px) {
-    div ul a {
-        display: none;
+    nav{
+        height: 55px;
+    }
+    h1{
+        margin-top: 8px;
+        color: rgb(204, 217, 233);
+    }
+    div ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 83px;
+        right: 0;
+        width: 40%;
+        z-index: 1;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+
+    div ul.show {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    div ul li {
+        padding: 15px;
+        text-align: center;
+        border-bottom: 1px solid #555;
     }
 
     #right {
@@ -106,5 +138,6 @@ li {
         top: 0;
         right: 0;
         margin: 20px 30px;
+        cursor: pointer;
     }
 }

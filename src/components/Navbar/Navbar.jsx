@@ -12,8 +12,8 @@ function Navbar() {
   return (
     <div>
       <nav>
-        <ul className={menu ? 'show' : 'hide'}>
-          <li id='portfolio'>Portfolio</li>
+          <h1 id='portfolio'>Portfolio</h1>
+          <ul className={menu ? 'show' : 'hide'}>
           <li><a href='/'>Intro</a></li>
           <li><a href='#about'> About</a></li>
           <li><a href='#intro'>Projects</a></li>
