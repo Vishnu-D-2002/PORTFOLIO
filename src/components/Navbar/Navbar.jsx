@@ -9,18 +9,22 @@ function Navbar() {
     setMenu(!menu);
   };
 
+  const closeMenu = () => {
+    setMenu(false);
+  };
+
   return (
     <div>
       <nav>
-          <h1 id='portfolio'>Portfolio</h1>
-          <ul className={menu ? 'show' : 'hide'}>
-          <li><a href='/'>Intro</a></li>
-          <li><a href='#about'> About</a></li>
-          <li><a href='#intro'>Projects</a></li>
-          <li><a href='#skills'>Skills</a></li>
-          <li><a href='#education'>Education</a></li>
-          <li><a href='#certification'>Certification</a></li>
-          <li><a href='#contact'>Contact</a></li>
+        <h1 id='portfolio'>Portfolio</h1>
+        <ul className={menu ? 'show' : 'hide'}>
+          <li><a href='/' onClick={closeMenu}>Intro</a></li>
+          <li><a href='#about' onClick={closeMenu}>About</a></li>
+          <li><a href='#intro' onClick={closeMenu}>Projects</a></li>
+          <li><a href='#skills' onClick={closeMenu}>Skills</a></li>
+          <li><a href='#education' onClick={closeMenu}>Education</a></li>
+          <li><a href='#certification' onClick={closeMenu}>Certification</a></li>
+          <li><a href='#contact' onClick={closeMenu}>Contact</a></li>
         </ul>
         <div id='right'>
           <input id="checkbox" type="checkbox" onClick={toggleMenu} />
