@@ -29,10 +29,10 @@ function Intro() {
   return (
     <section id='intro'>
       <div id='left-content'>
-        <h1 id='title'>Hi, I'm {titleText}</h1><br />
+        <h1 id='title'>Hello , I'm {titleText}</h1><br />
         <h1 id='fsd'>{fsdText}</h1>
         <p id='para'>
-            I'm a Full Stack Developer with expertise in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). I work on both the visible parts and the behind-the-scenes parts. My goal is to make user-friendly and efficient applications by writing smart and organized code. I enjoy learning about new technologies and collaborating with teams to build innovative solutions. Let's create something awesome together!
+            I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). I enjoy learning about new technologies and collaborating with teams to build innovative solutions. Let's create something awesome together!
           </p>
       </div>
       <div id='right-content'>
