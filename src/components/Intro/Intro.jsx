@@ -2,15 +2,14 @@ import React from 'react'
 import './Intro.css'; 
 function Intro() {
   return (
-    <div>
+    <section id='intro'>
       <div id='left'>
-        I'm VISHNU FULL STACK DEVELOPER
+        <h1 >Hi i am VISHNU</h1>
       </div>
-      <div id='end'>
-       <img src='public/img/vishnu.png'  alt='My ' className="rounded-image" />
-      </div>
-      
+    <div className='pro'>
+      <img src="/images/vishnu.png" alt="" className='rounded-image'/>
     </div>
+  </section>
   )
 }
 
