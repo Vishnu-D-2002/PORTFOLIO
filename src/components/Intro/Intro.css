@@ -113,10 +113,10 @@ body{
     text-align: center;
 }
 #end{
-    padding: 3% 25%;
+    margin: 3% auto;
+    padding-left: 5%;
     flex-shrink: 0;
     cursor: pointer;
-    margin: 5%;
     width: 300px;
     height: 100%;
 }
