@@ -20,7 +20,7 @@
 
 #title {
     background: linear-gradient(90deg, #ff4081, #3f51b5);
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
     transition: color 0.3s ease-in-out;
     letter-spacing: 2px;
@@ -28,8 +28,8 @@
 }
 
 #fsd {
-    background:repeating-linear-gradient(135deg, #227298, #0f51c3,rgb(235, 88, 181));
-    -webkit-background-clip: text;
+    background: repeating-linear-gradient(135deg, #227298, #0f51c3, rgb(235, 88, 181));
+    background-clip: text;
     color: transparent;
     transition: color 0.3s ease-in-out;
     letter-spacing: 1px;
