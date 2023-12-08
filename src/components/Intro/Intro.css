@@ -40,6 +40,8 @@
     flex-shrink: 0;
     cursor: pointer;
     margin: 5%;
+    width: 300px;
+    height: 100%;
 }
 
 .rounded-image {
@@ -80,3 +82,11 @@
         transform: scale(1.1);
     }
 }
+
+@media (max-width: 768px){
+    #content,#end,p{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+

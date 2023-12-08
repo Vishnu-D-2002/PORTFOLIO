@@ -23,13 +23,14 @@ function Intro() {
 
   return (
     <section id='intro'>
-      <div id='content'>
+      <div id='left-content'>
         <h1 id='title'>Hi I am VISHNU</h1><br />
-        <h1 id='fsd'>FULL STACK DEVELOPER</h1><br />
-        <h3></h3>
+        <h1 id='fsd'>FULL STACK DEVELOPER</h1>
       </div>
-      <div id='end'>
-        <img src="/images/vishnu.png" alt="" className='rounded-image' />
+      <div id='right-content'>
+        <div id='end'>
+          <img src="/images/vishnu.png" alt="" className='rounded-image' />
+        </div>
       </div>
     </section>
   );
