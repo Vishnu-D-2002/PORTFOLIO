@@ -1,29 +1,27 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Intro.css';
 
 function Intro() {
-  const animateTitle = (id) => {
-    const title = document.getElementById(id);
-    const text = title.innerText;
-    title.innerHTML = '';
+  const [titleText, setTitleText] = useState("Hi, I'm VISHNU");
+  const [fsdText, setFsdText] = useState("FULL STACK DEVELOPER (MERN)");
 
+  const animateTitle = (text, setText) => {
+    setText('');
     text.split('').forEach((letter, index) => {
       setTimeout(() => {
-        const span = document.createElement('span');
-        span.textContent = letter;
-        title.appendChild(span);
+        setText(prevText => prevText + letter);
       }, index * 300);
     });
   };
 
   useEffect(() => {
-    animateTitle('title');
-    animateTitle('fsd');
+    animateTitle("Hi, I'm VISHNU", setTitleText);
+    animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
 
     const intervalId = setInterval(() => {
-      animateTitle('title');
-      animateTitle('fsd');
-    }, 6000); 
+      animateTitle("Hi, I'm VISHNU", setTitleText);
+      animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
+    }, 9000);
 
     return () => clearInterval(intervalId);
   }, []);
@@ -31,8 +29,8 @@ function Intro() {
   return (
     <section id='intro'>
       <div id='left-content'>
-        <h1 id='title'>Hi I am VISHNU</h1><br />
-        <h1 id='fsd'>FULL STACK DEVELOPER</h1>
+        <h1 id='title'>{titleText}</h1><br />
+        <h1 id='fsd'>{fsdText}</h1>
       </div>
       <div id='right-content'>
         <div id='end'>
