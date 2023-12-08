@@ -63,6 +63,18 @@
     transform: scale(1.1);
 }
 
+#para {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 30px;
+    text-indent: 40px;
+    padding: 1%;
+}
+
+#left-content{
+    margin-left: 2%;
+}
+
 @keyframes moveUpDown {
     from {
         transform: translateY(0);
@@ -90,3 +102,13 @@
     }
 }
 
+@media (max-width:768px){
+#intro{
+    display: block;
+    text-align: center;
+}
+#end{
+    padding: 5% 20%;
+}
+
+}
