@@ -112,6 +112,10 @@ button:active {
     transition: 0.5s;
 }
 
+.resume{
+    margin: 2% 50%  3%;
+}
+
 @keyframes moveUpDown {
     from {
         transform: translateY(0);
@@ -158,5 +162,8 @@ button:active {
 }
 button{
     margin: 5% auto;
+}
+.resume{
+    margin-left:  32%;
 }
 }

@@ -38,8 +38,9 @@ function Intro() {
         <h1 id='title'>Hello , I'm {titleText}</h1><br />
         <h1 id='fsd'>{fsdText}</h1>
         <p id='para'>
-            I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). Let's create something awesome together!<button onClick={handleResumeClick}>Resume</button>
+            I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). Let's create something awesome together!
         </p>
+        <button className='resume' onClick={handleResumeClick}>Resume</button>
       </div>
       <div id='right-content'>
         <div id='end'>
