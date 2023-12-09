@@ -16,6 +16,16 @@
     align-items: center;
 }
 
+.section-titles {
+    width: 100%;
+    font-size: 34px;
+    color: #080808;
+    margin: 20px 50% 10px;
+    background: linear-gradient(120deg, #13344b, #8f39ac, rgb(238, 122, 13));
+    background-clip: text;
+    color: transparent;
+}
+
 .skilltitle {
     margin: 10px 0 0;
     font-size: 17px;

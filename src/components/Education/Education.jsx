@@ -25,6 +25,7 @@ const education = [
 function Education() {
   return (
     <section id='education'>
+      <h2 className='section-title'>STUDIES</h2>
       {
         education.map((data,i) => (
           <div className="card1" key={i}>
