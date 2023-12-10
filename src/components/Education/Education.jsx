@@ -5,7 +5,7 @@ const education = [
   {
     "school": "AVS engineering college",
     "level": "BE",
-    "title":"ELECTRONICS AND COMMUNICATION ENGINEERING (ECE)",
+    "title":"ELECTRONICS AND COMMUNICATION ENGINEERING",
     "percentage": 87,
     "description": "Completed Bachelor of Engineering in Electronics and Communication Engineering (ECE) with a remarkable 87% from AVS Engineering College."
   },
