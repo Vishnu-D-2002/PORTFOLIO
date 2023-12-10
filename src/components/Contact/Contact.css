@@ -91,12 +91,7 @@
 @media (max-width:380px){
   .card {
       display: flex;
-      height: 60px;
-      width: 300px;
-      margin: 3% auto;
+      height: 50px;
+      width: 250px;
     }
-  .card a{
-    display: flex;
-    flex-wrap: wrap;
-  }
 }
