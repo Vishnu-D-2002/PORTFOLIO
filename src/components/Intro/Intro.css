@@ -45,7 +45,7 @@ body{
     flex-shrink: 0;
     cursor: pointer;
     margin: 5%;
-    width: 300px;
+    width: 200px;
     height: 100%;
 }
 
@@ -166,4 +166,13 @@ button{
 .resume{
     margin-left:  32%;
 }
+}
+
+@media (max-width:380px){
+    body{
+        overflow-x: hidden;
+    }
+}
+* {
+    overflow-x: hidden;
 }
