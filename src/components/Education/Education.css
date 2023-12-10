@@ -80,3 +80,9 @@
         margin: 30% 40%;
     }
 }
+
+@media (max-width:500px){
+    .section-title{
+        margin: 3% 33%;
+    }
+}

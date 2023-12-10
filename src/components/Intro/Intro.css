@@ -6,6 +6,7 @@
 
 body{
     background-color: rgb(214, 213, 210);
+    overflow-x: hidden;
 }
 
 .title-container {
