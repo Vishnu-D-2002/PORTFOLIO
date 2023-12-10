@@ -87,3 +87,16 @@
     transform: scale(1);
   }
 }
+
+@media (max-width:380px){
+  .card {
+      display: flex;
+      height: 60px;
+      width: 300px;
+      margin: 3% auto;
+    }
+  .card a{
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
