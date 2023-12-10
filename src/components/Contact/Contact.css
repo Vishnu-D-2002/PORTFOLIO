@@ -1,7 +1,8 @@
 .card {
   display: flex;
-  height: 70px;
-  width: 350px;
+  height: 80px;
+  width: 400px;
+  margin: 3% auto;
 }
 
 .card svg {
@@ -28,11 +29,12 @@
   align-items: center;
   justify-content: center;
   width: 25%;
-  color: whitesmoke;
+  background-color:#333;
   font-size: 24px;
   text-decoration: none;
   transition: 0.25s;
   border-radius: 50px;
+  margin-left:1%;
 }
 
 .card svg {
