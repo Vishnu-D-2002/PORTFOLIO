@@ -102,26 +102,36 @@ const Projects = () => {
   }
 ]
 
-  return (
-    <section id='projects'>
-      <h1>Projects</h1>
+ return (
+   <section id='projects'>
+     <h1 id='project-title'>Projects</h1>
       <div className="containerProject">
-      {projects.map((project, index) => (
-        <div className="cardProject" key={index}>
-          <div className="BoxProject">
-            <img src={`https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500`} alt={`Project ${index + 1}`} />
-          </div>
-          <div className="detailsProject">
-            <h2>{project.title}</h2>
-            <p>{project.description}</p>
-            <div>
-              <strong>Tools Used:</strong> {project.toolsUsed.join(", ")}
+        {projects.map((project, index) => (
+          <div className="cardProject" key={index}>
+            <div className="BoxProject">
+              <img
+                src={`https://images.pexels.com/photos/594610/pexels-photo-594610.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500`}
+                alt={`Project ${index + 1}`}
+              />
+            </div>
+            <div className="detailsProject">
+              <h2>{project.title}</h2>
+              <p>{project.description}</p>
+              <div>
+                <h3>
+                  <strong>Tools Used:</strong>
+                </h3>{' '}
+                {project.toolsUsed.join(', ')}
+              </div>
+              <div className="buttons">
+                <button className='btn1'>Source Code</button>
+                <button className='btn1'>Live Demo</button>
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
-     </section>
+        ))}
+      </div>
+    </section>
   );
 };
 
