@@ -27,7 +27,7 @@ function Navbar() {
           <li><a href='#contact' onClick={closeMenu}>Contact</a></li>
         </ul>
         <div id='right'>
-          <input id="checkbox" type="checkbox" onClick={toggleMenu} checked={menu} />
+          <input id="checkbox" type="checkbox" onChange={toggleMenu} checked={menu} />
           <label className="toggle" htmlFor="checkbox">
             <div id="bar1" className="bars"></div>
             <div id="bar2" className="bars"></div>
