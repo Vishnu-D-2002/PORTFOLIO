@@ -4,7 +4,7 @@ import Intro from './components/Intro/Intro'
 import Projects from './components/Projects/Projects'
 import Skills from './components/Skills/Skills'
 import Education from './components/Education/Education'
-import Certification from './components/Certification/Certification'
+// import Certification from './components/Certification/Certification'
 import Contact from './components/Contact/Contact'
 import About from './components/About/About'
 
@@ -17,7 +17,7 @@ function App() {
       <Projects />
       <Skills />
       <Education />
-      <Certification />
+      {/* <Certification /> */}
       <Contact />
     </div>
   )
