@@ -16,7 +16,7 @@ const education = [
     "img": "https://i.postimg.cc/qB8KjNjR/school.jpg",
     "title": "HIGHER SECONDARY",
     "percentage": 84,
-    "description": "Achieved an impressive 84% in the Higher Secondary (12th Grade) from AKV Matric HR Secondary School, showcasing strong academic performance."
+    "description": "Achieved an impressive 84% in the Higher Secondary (12th Grade) from AKV Matric HR Secondary School, actively participating in debates and science exhibitions for holistic development."
   },
   {
     "school": "AKV matric hr sec school",
@@ -24,7 +24,7 @@ const education = [
     "img": "https://i.postimg.cc/SNb0CxKk/tenth.jpg",
     "title": "SECONDARY SCHOOL",
     "percentage": 96,
-    "description": "Secured an outstanding 96% in the Secondary School Leaving Certificate (10th Grade) from AKV Matric HR Secondary School, demonstrating excellence in academics."
+    "description": "Secured an outstanding 96% in the Secondary School Leaving Certificate (10th Grade) from AKV Matric HR Secondary School, demonstrating excellence not only in academics but also in sports, leadership, and community service."
   }
 ];
 
