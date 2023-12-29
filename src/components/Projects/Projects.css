@@ -11,7 +11,7 @@
     margin: 20px 10px;
     width: 350px;
     height: 400px;
-    background: #ecf0f1;
+    background:whitesmoke;
     transform-style: preserve-3d;
     transform: perspective(2000px);
     box-shadow: inset 10px 0 20px rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .2);
