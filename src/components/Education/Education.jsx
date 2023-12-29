@@ -4,7 +4,7 @@ import './Education.css';
 const education = [
   {
     "school": "AVS engineering college",
-    "level": "BE",
+    "level": "BE (ECE)",
     "img": "https://i.postimg.cc/bvZgJ1kg/clg.jpg",
     "title": "ELECTRONICS AND COMMUNICATION ENGINEERING",
     "percentage": 87,
@@ -12,15 +12,15 @@ const education = [
   },
   {
     "school": "AKV matric hr sec school",
-    "level": "HSC",
-    "img": "https://i.postimg.cc/D06qvcfx/twelth.jpg",
+    "level": "HSC (XII)",
+    "img": "https://i.postimg.cc/qB8KjNjR/school.jpg",
     "title": "HIGHER SECONDARY",
     "percentage": 84,
     "description": "Achieved an impressive 84% in the Higher Secondary (12th Grade) from AKV Matric HR Secondary School, showcasing strong academic performance."
   },
   {
     "school": "AKV matric hr sec school",
-    "level": "SSLC",
+    "level": "SSLC (X)",
     "img": "https://i.postimg.cc/SNb0CxKk/tenth.jpg",
     "title": "SECONDARY SCHOOL",
     "percentage": 96,
@@ -30,22 +30,22 @@ const education = [
 
 function Education() {
   return (
-    <section id='education'>
+    <section id='education' className='edu-container'>
       <h2 className='section-title'>STUDIES</h2>
-      {
-        education.map((data, i) => (
-          <div className="card1" key={i}>
-            <div>
+      <div className="edu-card-container">
+        {education.map((data, i) => (
+          <div className="edu-card" key={i}>
+            <div className="edu-card__image">
               <img src={data.img} alt={data.title} />
-              <h1 className='educ_title'>{data.level}</h1>
+              <h1 className='educ-title'>{data.level}</h1>
             </div>
-            <div className="card__content">
-              <p className="card__title">{data.title}</p>
-              <p className="card__description">{data.description}</p>
+            <div className="edu-card__content">
+              <p className="edu-card__title">{data.title}</p>
+              <p className="edu-card__description">{data.description}</p>
             </div>
           </div>
-        ))
-      }
+        ))}
+      </div>
     </section>
   );
 }

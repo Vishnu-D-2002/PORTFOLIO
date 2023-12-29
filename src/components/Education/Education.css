@@ -1,32 +1,64 @@
 
-.card1 {
-    width: 300px;
+.edu-container {
+    text-align: center;
+    margin: 7% auto 10px;
+}
+
+.section-title {
+    font-size: 34px;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    color: #3d2d4d;
+    background-clip: text;
+}
+
+.edu-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.edu-card {
+    width: 320px;
     height: 255px;
-    margin: 10px;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(45deg, #3498db, #e74c3c);
+    background-color: #303030;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
 }
 
-.card1 img {
+.edu-card__image {
+    position: relative;
+}
+
+.edu-card img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    /* Maintain aspect ratio */
     transition: transform 0.3s ease;
-    z-index: 1;
 }
 
-.card1:hover img {
-    transform: translateY(-100%);
+.edu-card:hover {
+    transform: scale(1.05);
+    /* Enlarge on hover */
 }
 
-.card__content {
+.edu-card:hover img {
+    transform: translateY(-10%);
+    /* Move image up on hover */
+}
+
+.edu-card__content {
     position: absolute;
     bottom: 0;
     left: 0;
+    /* top: 0;
+    right: 0; */
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 10px;
     box-sizing: border-box;
     opacity: 0;
@@ -34,57 +66,27 @@
     z-index: 2;
 }
 
-.card1:hover .card__content {
+.edu-card:hover .edu-card__content {
     opacity: 1;
 }
 
-.educ_title {
+.educ-title {
     text-align: center;
     margin-top: 5px;
+    color: #fff;
 }
 
-.card__title {
-    font-size: larger;
-}
-
-.section-title {
-    margin: 7% 45% 10px 40%;
-    font-size: 34px;
-    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
-    color: #3d2d4d;
-    background-clip: text;
-}
-
-.card__title {
+.edu-card__title {
     margin: 0;
     font-size: 25px;
-    color: #4b1a21;
+    color: #fff;
     font-weight: 700;
 }
 
-.card__description {
+.edu-card__description {
     margin: 10px 0 0;
-    font-size: 18px;
-    color: #0b070f;
+    font-size: 16px;
+    color: #eee;
     line-height: 1.4;
     font-weight: bold;
-}
-
-@media (min-width: 768px) {
-    .card1 {
-        display: inline-block;
-        margin: 5%;
-    }
-}
-
-@media (max-width:768px){
-    .card1{
-        margin: 15% auto;
-    }
-}
-
-@media (max-width:500px) {
-    .section-title {
-        margin: 15% 33% 5%;
-    }
 }
