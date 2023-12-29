@@ -5,7 +5,7 @@ const education = [
   {
     "school": "AVS engineering college",
     "level": "BE",
-    "img": "/images/college.png",
+    "img": "https://i.postimg.cc/bvZgJ1kg/clg.jpg",
     "title": "ELECTRONICS AND COMMUNICATION ENGINEERING",
     "percentage": 87,
     "description": "Completed Bachelor of Engineering in Electronics and Communication Engineering (ECE) with a remarkable 87% from AVS Engineering College."
@@ -13,7 +13,7 @@ const education = [
   {
     "school": "AKV matric hr sec school",
     "level": "HSC",
-    "img": "/images/college.png",
+    "img": "https://i.postimg.cc/D06qvcfx/twelth.jpg",
     "title": "HIGHER SECONDARY",
     "percentage": 84,
     "description": "Achieved an impressive 84% in the Higher Secondary (12th Grade) from AKV Matric HR Secondary School, showcasing strong academic performance."
@@ -21,7 +21,7 @@ const education = [
   {
     "school": "AKV matric hr sec school",
     "level": "SSLC",
-    "img": "/images/college.png",
+    "img": "https://i.postimg.cc/SNb0CxKk/tenth.jpg",
     "title": "SECONDARY SCHOOL",
     "percentage": 96,
     "description": "Secured an outstanding 96% in the Secondary School Leaving Certificate (10th Grade) from AKV Matric HR Secondary School, demonstrating excellence in academics."

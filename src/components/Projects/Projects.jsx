@@ -32,7 +32,7 @@ const Projects = () => {
       "title": "Rest Countries Weather",
       "description": "Discover detailed information about countries and regions around the world. This interactive explorer, developed with React and powered by the REST Countries API, allows users to explore diverse geographical and cultural data.",
       "toolsUsed": ["React", "REST Countries API"],
-      "image": "public/images/rest.png",
+      "image": "https://i.postimg.cc/W1Wv640f/rest.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-11",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-11/weather_display.html"
     },
