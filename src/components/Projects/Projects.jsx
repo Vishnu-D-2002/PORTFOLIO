@@ -104,7 +104,7 @@ const Projects = () => {
       "title": "Calculator App",
       "description": "Experience the simplicity and power of a feature-rich calculator app. This application, developed with React and JavaScript, provides both basic and advanced mathematical functions for a versatile user experience.",
       "toolsUsed": ["React", "JavaScript"],
-      "image": "public/images/calci.png",
+      "image": "https://i.postimg.cc/QCzq8d0F/calci.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-9/Calculator",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-9/calculator/calculator"
     },
