@@ -16,12 +16,12 @@ function Intro() {
 
   useEffect(() => {
     animateTitle("VISHNU", setTitleText);
-    animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
+    // animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
 
     const intervalId = setInterval(() => {
       animateTitle("VISHNU", setTitleText);
-      animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
-    }, 14000);
+      // animateTitle('FULL STACK DEVELOPER (MERN)', setFsdText);
+    }, 4000);
 
     return () => clearInterval(intervalId);
   }, []);

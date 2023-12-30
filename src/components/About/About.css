@@ -142,7 +142,7 @@
 }
 
 #about span {
-    color: rgb(255, 3, 3);
+    color: rgb(0, 255, 191);
 }
 
 @media (min-width:698px) {
@@ -185,7 +185,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: linear-gradient(45deg, #ff6b6b, #91e66a);
+    background: linear-gradient(45deg, #8d8989, #819ba3);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -276,15 +276,15 @@ ul li {
     }
 
     25% {
-        color: rgb(140, 255, 0);
+        color: whitesmoke;
     }
 
     50% {
-        color: yellow;
+        color: rgb(219, 219, 10);
     }
 
     75% {
-        color:rgb(101, 61, 203);
+        color:#090909;
     }
 
     100% {
