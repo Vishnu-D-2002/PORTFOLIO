@@ -1,3 +1,5 @@
+/* Projects.css */
+
 .containerProject {
     max-width: 1200px;
     margin: 100px auto;
@@ -11,7 +13,7 @@
     margin: 20px 10px;
     width: 350px;
     height: 400px;
-    background:whitesmoke;
+    background: whitesmoke;
     transform-style: preserve-3d;
     transform: perspective(2000px);
     box-shadow: inset 10px 0 20px rgba(0, 0, 0, .2), 0 10px 20px rgba(0, 0, 0, .2);
@@ -64,6 +66,47 @@
     z-index: -1;
 }
 
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.arrows svg {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.indicators {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ddd;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #555;
+}
+
+/* Additional styles for buttons */
 .btn1 {
     display: inline-block;
     padding: 10px 20px;
@@ -122,4 +165,28 @@
     .cardProject {
         width: calc(33.33% - 20px);
     }
+}
+
+.sliderContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.sliderButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    color: #2c3e50;
+    cursor: pointer;
+}
+
+.sliderButton.left {
+    left: 10px;
+}
+
+.sliderButton.right {
+    right: 10px;
 }

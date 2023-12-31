@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
+  
+  const [startIndex, setStartIndex] = useState(0);
 
   const projects = [
     {
@@ -126,38 +129,70 @@ const Projects = () => {
     }
   ];
 
+  const cardsToShow = 3;
+  const totalCards = projects.length;
+
+  const nextSlide = () => {
+    setStartIndex((prevIndex) => (prevIndex + cardsToShow) % totalCards);
+  };
+
+  const prevSlide = () => {
+    setStartIndex((prevIndex) => (prevIndex - cardsToShow + totalCards) % totalCards);
+  };
+
   return (
     <section id='projects'>
       <h1 id='project-title'>Projects</h1>
-      <div className="containerProject">
-        {projects.map((project, index) => (
-          <div className="cardProject" key={index}>
-            <div className="BoxProject">
-              <img
-                src={project.image}
-                alt={`Project ${index + 1}`}
-              />
-            </div>
-            <div className="detailsProject">
-              <h2>{project.title}</h2>
-              <p>{project.description}</p>
-              <div>
-                <h3>
-                  <strong>Tools Used:</strong>
-                </h3>{' '}
-                {project.toolsUsed.join(', ')}
+      <div className="sliderContainer">
+        <div className="containerProject">
+          {projects.slice(startIndex, startIndex + cardsToShow).map((project, index) => (
+            <div key={index} className="cardProject">
+              <div className="BoxProject">
+                <img
+                  src={project.image}
+                  alt={`Project ${startIndex + index + 1}`}
+                />
               </div>
-              <div className="buttons">
-                <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className='btn1'>
-                  Source Code
-                </a>
-                <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className='btn1'>
-                  Live Demo
-                </a>
+              <div className="detailsProject">
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+                <div>
+                  <h3>
+                    <strong>Tools Used:</strong>
+                  </h3>{' '}
+                  {project.toolsUsed.join(', ')}
+                </div>
+                <div className="buttons">
+                  <a href={project.sourceCode} target="_blank" rel="noopener noreferrer" className='btn1'>
+                    Source Code
+                  </a>
+                  <a href={project.liveDemo} target="_blank" rel="noopener noreferrer" className='btn1'>
+                    Live Demo
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+        {totalCards > cardsToShow && (
+          <>
+            <button className="sliderButton left" onClick={prevSlide}>
+              &lt;
+            </button>
+            <button className="sliderButton right" onClick={nextSlide}>
+              &gt;
+            </button>
+          </>
+        )}
+        <div className="indicators">
+          {Array.from({ length: Math.ceil(totalCards / cardsToShow) }).map((_, index) => (
+            <span
+              key={index}
+              className={`indicator ${index === startIndex / cardsToShow ? 'active' : ''}`}
+              onClick={() => setStartIndex(index * cardsToShow)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
