@@ -1,8 +1,6 @@
-/* Projects.css */
-
 .containerProject {
     max-width: 1200px;
-    margin: 100px auto;
+    margin: 10px auto 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -64,11 +62,6 @@
     box-sizing: border-box;
     padding: 20px;
     z-index: -1;
-}
-
-.sliderContainer {
-    position: relative;
-    overflow: hidden;
 }
 
 .arrows {
@@ -152,9 +145,15 @@
 
 #project-title {
     font-family: 'Arial', sans-serif;
-    color: #e74c3c;
+    background: linear-gradient(90deg, #ff0000,rgb(255, 238, 2));
+    background-clip: text;
+    color: transparent;
+    transition: color 0.3s ease-in-out;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     font-size: 36px;
-    margin: 10% 37%;
+    margin: 5%;
+    text-align: center;
 }
 
 @media only screen and (min-width: 1201px) {
