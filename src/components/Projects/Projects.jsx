@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './Projects.css';
 
 const Projects = () => {
   
   const [startIndex, setStartIndex] = useState(0);
+  const containerRef = useRef(null);
+  const animationRef = useRef(null);
+  const isActive = (index) => {
+    const start = index * cardsToShow;
+    const end = start + cardsToShow;
+    return startIndex >= start && startIndex < end;
+  };
 
   const projects = [
     {
@@ -18,7 +25,7 @@ const Projects = () => {
     {
       "title": "URL Shortener",
       "description": "Shorten and share long URLs with ease, and gain insights into link performance through analytics. The URL shortener is built using React, Express, MongoDB, and Node.js to provide a robust and scalable solution.",
-      "toolsUsed": ["React" ,"Express", "MongoDB", "Node.js"],
+      "toolsUsed": ["React", "Express", "MongoDB", "Node.js"],
       "image": "https://i.postimg.cc/SRWVQhYq/url.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/URL-Short-FE",
       "liveDemo": "https://main--spiffy-medovik-29bd79.netlify.app/"
@@ -34,7 +41,7 @@ const Projects = () => {
     {
       "title": "Rest Countries Weather",
       "description": "Discover detailed information about countries and regions around the world. This interactive explorer, developed with DOM , Node.js and powered by the REST Countries API, allows users to explore diverse geographical and cultural data.",
-      "toolsUsed": ["DOM","Node.js", "REST Countries API"],
+      "toolsUsed": ["DOM", "Node.js", "REST Countries API"],
       "image": "https://i.postimg.cc/W1Wv640f/rest.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-11",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-11/weather_display.html"
@@ -50,7 +57,7 @@ const Projects = () => {
     {
       "title": "Dictionary App",
       "description": "Expand your vocabulary with a comprehensive Dictionary App. Look up word meanings and definitions effortlessly. Developed using DOM, Node.js and integrated with the Dictionary API for accurate and rich word data.",
-      "toolsUsed": ["DOM" ,"Node.js" , "Dictionary API"],
+      "toolsUsed": ["DOM", "Node.js", "Dictionary API"],
       "image": "https://i.postimg.cc/NF1Bk5SX/dictionary.png",
       "sourceCode": " https://github.com/Vishnu-D-2002/task/tree/main/task-12/thirukkural",
       "liveDemo": " https://main--enchanting-swan-189083.netlify.app/task-12/thirukkural/"
@@ -58,7 +65,7 @@ const Projects = () => {
     {
       "title": "Weather App",
       "description": "Stay informed about real-time weather conditions worldwide. The Weather App, powered by React and the OpenWeatherMap API, provides accurate weather data and an intuitive user interface for easy exploration.",
-      "toolsUsed": ["DOM" , "Node.js" , "OpenWeatherMap API"],
+      "toolsUsed": ["DOM", "Node.js", "OpenWeatherMap API"],
       "image": "https://i.postimg.cc/9M2D5H2y/weather.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-12/weather",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-12/weather/"
@@ -66,7 +73,7 @@ const Projects = () => {
     {
       "title": "My Todo App",
       "description": "Efficiently manage your tasks with a user-friendly to-do list application. Built using React , Bootstrap and useStates for data persistence, this app offers a seamless and organized task management experience.",
-      "toolsUsed": ["React" ,"Bootstrap" , "useStates"],
+      "toolsUsed": ["React", "Bootstrap", "useStates"],
       "image": "https://i.postimg.cc/HsVpZ9LF/todos.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/Todo-list",
       "liveDemo": "https://main--funny-stardust-9d67bf.netlify.app/"
@@ -74,7 +81,7 @@ const Projects = () => {
     {
       "title": "Holiday Explorer",
       "description": "Explore holidays and celebrations around the world with the Holiday Explorer app. Discover festive traditions, dates, and customs from different countries. Developed using DOM , Node.js and integrated with the Holiday API for up-to-date and diverse holiday data.",
-      "toolsUsed": ["DOM" , "Node.js" , "Holiday API"],
+      "toolsUsed": ["DOM", "Node.js", "Holiday API"],
       "image": "https://i.postimg.cc/bNx1sgCy/holiday.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-12/holiday",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-12/holiday/"
@@ -106,7 +113,7 @@ const Projects = () => {
     {
       "title": "Calculator App",
       "description": "Experience the simplicity and power of a feature-rich calculator app. This application, developed with DOM and JavaScript, provides both basic and advanced mathematical functions for a versatile user experience.",
-      "toolsUsed": ["DOM","HTML" ,"CSS" , "JavaScript"],
+      "toolsUsed": ["DOM", "HTML", "CSS", "JavaScript"],
       "image": "https://i.postimg.cc/QCzq8d0F/calci.png",
       "sourceCode": "https://github.com/Vishnu-D-2002/task/tree/main/task-9/Calculator",
       "liveDemo": "https://main--enchanting-swan-189083.netlify.app/task-9/calculator/calculator"
@@ -140,10 +147,52 @@ const Projects = () => {
     setStartIndex((prevIndex) => (prevIndex - cardsToShow + totalCards) % totalCards);
   };
 
+  useEffect(() => {
+    const container = containerRef.current;
+    const handleMouseEnter = () => {
+      container.style.transition = 'none';
+      cancelAnimationFrame(animationRef.current);
+    };
+
+    const handleMouseLeave = () => {
+      container.style.transition = 'transform 0.5s ease';
+      startAnimation();
+    };
+
+    container.addEventListener('mouseenter', handleMouseEnter);
+    container.addEventListener('mouseleave', handleMouseLeave);
+
+    return () => {
+      container.removeEventListener('mouseenter', handleMouseEnter);
+      container.removeEventListener('mouseleave', handleMouseLeave);
+    };
+  }, []);
+
+  const startAnimation = () => {
+    const container = containerRef.current;
+
+    const animate = () => {
+      setStartIndex((prevIndex) => (prevIndex + 1) % totalCards);
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+  };
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const handle = setTimeout(() => startAnimation(), 3000);
+
+    return () => {
+      clearTimeout(handle);
+      cancelAnimationFrame(animationRef.current);
+    };
+  }, [startIndex]);
+
   return (
     <section id='projects'>
       <h1 id='project-title'>Projects</h1>
-      <div className="sliderContainer">
+      <div className="sliderContainer" ref={containerRef}>
         <div className="containerProject">
           {projects.slice(startIndex, startIndex + cardsToShow).map((project, index) => (
             <div key={index} className="cardProject">
@@ -177,10 +226,10 @@ const Projects = () => {
         {totalCards > cardsToShow && (
           <>
             <button className="sliderButton left" onClick={prevSlide}>
-              &lt;
+              <FaArrowLeft />
             </button>
             <button className="sliderButton right" onClick={nextSlide}>
-              &gt;
+              <FaArrowRight />
             </button>
           </>
         )}
@@ -188,11 +237,12 @@ const Projects = () => {
           {Array.from({ length: Math.ceil(totalCards / cardsToShow) }).map((_, index) => (
             <span
               key={index}
-              className={`indicator ${index === startIndex / cardsToShow ? 'active' : ''}`}
+              className={`indicator ${isActive(index) ? 'active' : ''}`}
               onClick={() => setStartIndex(index * cardsToShow)}
             />
           ))}
         </div>
+
       </div>
     </section>
   );
