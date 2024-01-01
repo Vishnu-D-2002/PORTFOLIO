@@ -166,7 +166,9 @@ body{
 button{
     margin: 5% auto;
 }
-.resume{
-    margin-left:  32%;
+.resume {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 }

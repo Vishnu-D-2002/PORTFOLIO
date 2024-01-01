@@ -40,7 +40,7 @@ function Intro() {
         <p id='para'>
             I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). Let's create something awesome together!
         </p>
-        <button className='resume' onClick={handleResumeClick}>Resume</button>
+        <button className='resume' onClick={handleResumeClick}>View Resume</button>
       </div>
       <div id='right-content'>
         <div id='end'>
