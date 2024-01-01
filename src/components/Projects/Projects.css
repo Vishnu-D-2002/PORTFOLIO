@@ -90,13 +90,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: #a6a5a5;
     margin: 0 5px;
     cursor: pointer;
 }
 
 .indicator.active {
-    background-color: #555;
+    background-color: #080808;
 }
 
 /* Additional styles for buttons */

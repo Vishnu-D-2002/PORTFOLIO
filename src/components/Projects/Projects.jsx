@@ -2,14 +2,25 @@ import React, { useEffect, useRef, useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import './Projects.css';
 
-const cardsToShow = 3;
-
 const Projects = ({ projects }) => {
   const [startIndex, setStartIndex] = useState(0);
   const containerRef = useRef(null);
   const animationRef = useRef(null);
 
   const totalCards = projects.length;
+  const screenWidth = window.innerWidth;
+
+  let cardsToShow, numIndicators;
+  if (screenWidth < 755) {
+    cardsToShow = 1;
+    numIndicators = 15;
+  } else if (screenWidth >= 755 && screenWidth < 1140) {
+    cardsToShow = 2;
+    numIndicators = 10;
+  } else {
+    cardsToShow = 3;
+    numIndicators = 5;
+  }
 
   const nextSlide = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % totalCards);
@@ -110,7 +121,7 @@ const Projects = ({ projects }) => {
             </div>
           ))}
         </div>
-        {totalCards > cardsToShow && (
+        {totalCards > 1 && (
           <>
             <button className="sliderButton left" onClick={prevSlide}>
               <FaArrowLeft />
@@ -121,7 +132,7 @@ const Projects = ({ projects }) => {
           </>
         )}
         <div className="indicators">
-          {Array.from({ length: Math.ceil(totalCards / cardsToShow) }).map((_, index) => (
+          {Array.from({ length: numIndicators }).map((_, index) => (
             <span
               key={index}
               className={`indicator ${isActive(index) ? 'active' : ''}`}
