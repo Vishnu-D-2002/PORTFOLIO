@@ -20,7 +20,7 @@ function About() {
       </div>
       <div className='image-area'>
         <div className='img-wrapper'>
-          <img src='/images/vishnu.png' alt='vishnu' />
+          <img src='https://i.postimg.cc/437hC7c4/Blue-Watercolor-Minimalist-Quote-Instagram-Post-20240121-090123-0000.png' alt='vishnu' />
           <h2>VISHNU</h2>
           <ul>
             <li><a href='https://github.com/Vishnu-D-2002?tab=repositories' target='_blank'><i className='fab fa-github'></i></a></li>

@@ -23,7 +23,7 @@ function Navbar() {
           <li><a href='#projects' onClick={closeMenu}>Projects</a></li>
           <li><a href='#skills' onClick={closeMenu}>Skills</a></li>
           <li><a href='#education' onClick={closeMenu}>Education</a></li>
-          {/* <li><a href='#certification' onClick={closeMenu}>Certification</a></li> */}
+          <li><a href='#certification' onClick={closeMenu}>Certification</a></li>
           <li><a href='#contact' onClick={closeMenu}>Contact</a></li>
         </ul>
         <div id='right'>
