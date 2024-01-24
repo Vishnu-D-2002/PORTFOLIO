@@ -1,8 +1,17 @@
-# React + Vite
+# VISHNU's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About Me
 
-Currently, two official plugins are available:
+I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). Let's create something awesome together!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+In the fast-paced world of FULL STACK DEVELOPER, I understand the importance of staying updated with the latest trends and technologies. I am dedicated to continuous learning and improvement.
+
+[See the code for Education, Projects, Skills, Certifications]
+
+
+## Contact
+
+- **Email:** vishnuduraisamy2002@gmail.com
+- **Github:** [https://github.com/Vishnu-D-2002]
+- **LinkedIn:** [https://www.linkedin.com/in/vishnu-d-1453aa246/]
+- **Portfolio:** [https://portfolio-dynamic.netlify.app/]
