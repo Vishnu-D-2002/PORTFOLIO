@@ -27,7 +27,8 @@ function Intro() {
   }, []);
 
   const handleResumeClick = () => {
-    const resumeUrl = 'https://drive.google.com/file/d/17FBejZc5ga5r0z_qS1Iv3avIBcG16CcC/view?usp=drivesdk';
+    const resumeUrl =
+      "https://drive.google.com/file/d/1HbWZvYGpEBhhcd3M5s8zGrWJQF_uew-u/view";
     
     window.open(resumeUrl, '_blank'); 
   };
@@ -40,7 +41,7 @@ function Intro() {
         <p id='para'>
             I'm very Interested in creating websites and apps using a technology stack called MERN (MongoDB, Express.js, React, Node.js). Let's create something awesome together!
         </p>
-        <button className='resume' onClick={handleResumeClick}>View Resume</button>
+        <button className='resume' onClick={handleResumeClick}>View / Download Resume</button>
       </div>
       <div id='right-content'>
         <div id='end'>
@@ -48,7 +49,7 @@ function Intro() {
         </div>
       </div>
     </section>
-  );
+  ); 
 }
 
 export default Intro;

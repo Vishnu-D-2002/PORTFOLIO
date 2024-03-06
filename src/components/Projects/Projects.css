@@ -145,7 +145,7 @@
 
 #project-title {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(90deg, #ff0000,rgb(255, 238, 2));
+    background: linear-gradient(120deg, #13344b, #8f39ac, rgb(92, 246, 8));
     background-clip: text;
     color: transparent;
     transition: color 0.3s ease-in-out;

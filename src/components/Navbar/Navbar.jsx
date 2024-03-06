@@ -18,7 +18,6 @@ function Navbar() {
       <nav>
         <h1 id='portfolio'>Portfolio</h1>
         <ul className={menu ? 'show' : 'hide'}>
-          <li><a href='/' onClick={closeMenu}>Intro</a></li>
           <li><a href='#about' onClick={closeMenu}>About</a></li>
           <li><a href='#projects' onClick={closeMenu}>Projects</a></li>
           <li><a href='#skills' onClick={closeMenu}>Skills</a></li>

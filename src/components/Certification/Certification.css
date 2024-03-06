@@ -30,12 +30,6 @@
     outline: none;
 }
 
-.cardCertificate:hover {
-    z-index: 10000;
-    transform: perspective(2000px) rotateX(0deg);
-    box-shadow: inset 5px 0 20px rgba(0, 0, 0, .2), 0 10px 30px rgba(0, 0, 0, .3);
-}
-
 .cardCertificate .BoxCertificate {
     position: relative;
     width: 100%;

@@ -1,11 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
-import './Projects.css';
+import React, { useEffect, useRef, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import "./Projects.css";
 
 const Projects = ({ projects }) => {
   const [startIndex, setStartIndex] = useState(0);
   const containerRef = useRef(null);
   const animationRef = useRef(null);
+  const animationTimeoutRef = useRef(null);
 
   const totalCards = projects.length;
   const screenWidth = window.innerWidth;
@@ -13,13 +14,13 @@ const Projects = ({ projects }) => {
   let cardsToShow, numIndicators;
   if (screenWidth < 755) {
     cardsToShow = 1;
-    numIndicators = 15;
+    numIndicators = Math.ceil(projects.length / cardsToShow);
   } else if (screenWidth >= 755 && screenWidth < 1140) {
     cardsToShow = 2;
-    numIndicators = 10;
+    numIndicators = Math.ceil(projects.length / cardsToShow);
   } else {
     cardsToShow = 3;
-    numIndicators = 5;
+    numIndicators = Math.ceil(projects.length / cardsToShow);
   }
 
   const nextSlide = () => {
@@ -47,22 +48,22 @@ const Projects = ({ projects }) => {
 
   useEffect(() => {
     const container = containerRef.current;
+
     const handleMouseEnter = () => {
-      container.style.transition = 'none';
       cancelAnimationFrame(animationRef.current);
+      clearTimeout(animationTimeoutRef.current);
     };
 
     const handleMouseLeave = () => {
-      container.style.transition = 'transform 0.5s ease';
       startAnimation();
     };
 
-    container.addEventListener('mouseenter', handleMouseEnter);
-    container.addEventListener('mouseleave', handleMouseLeave);
+    container.addEventListener("mouseenter", handleMouseEnter);
+    container.addEventListener("mouseleave", handleMouseLeave);
 
     return () => {
-      container.removeEventListener('mouseenter', handleMouseEnter);
-      container.removeEventListener('mouseleave', handleMouseLeave);
+      container.removeEventListener("mouseenter", handleMouseEnter);
+      container.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, []);
 
@@ -74,22 +75,24 @@ const Projects = ({ projects }) => {
       animationRef.current = requestAnimationFrame(animate);
     };
 
-    animationRef.current = requestAnimationFrame(animate);
+    animationTimeoutRef.current = setTimeout(() => {
+      animationRef.current = requestAnimationFrame(animate);
+    }, 3000);
   };
 
   useEffect(() => {
     const container = containerRef.current;
-    const handle = setTimeout(() => startAnimation(), 3000);
+    startAnimation();
 
     return () => {
-      clearTimeout(handle);
+      clearTimeout(animationTimeoutRef.current);
       cancelAnimationFrame(animationRef.current);
     };
   }, [startIndex]);
 
   return (
-    <section id='projects'>
-      <h1 id='project-title'>Projects</h1>
+    <section id="projects">
+      <h1 id="conttitle">Projects</h1>
       <div className="sliderContainer" ref={containerRef}>
         <div className="containerProject">
           {Array.from({ length: cardsToShow }).map((_, index) => (
@@ -106,14 +109,28 @@ const Projects = ({ projects }) => {
                 <div>
                   <h3>
                     <strong>Tools Used:</strong>
-                  </h3>{' '}
-                  {projects[(startIndex + index) % totalCards].toolsUsed.join(', ')}
+                  </h3>{" "}
+                  {projects[(startIndex + index) % totalCards].toolsUsed.join(
+                    ", "
+                  )}
                 </div>
                 <div className="buttons">
-                  <a href={projects[(startIndex + index) % totalCards].sourceCode} target="_blank" rel="noopener noreferrer" className='btn1'>
+                  <a
+                    href={
+                      projects[(startIndex + index) % totalCards].sourceCode
+                    }
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn1"
+                  >
                     Source Code
                   </a>
-                  <a href={projects[(startIndex + index) % totalCards].liveDemo} target="_blank" rel="noopener noreferrer" className='btn1'>
+                  <a
+                    href={projects[(startIndex + index) % totalCards].liveDemo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn1"
+                  >
                     Live Demo
                   </a>
                 </div>
@@ -135,7 +152,7 @@ const Projects = ({ projects }) => {
           {Array.from({ length: numIndicators }).map((_, index) => (
             <span
               key={index}
-              className={`indicator ${isActive(index) ? 'active' : ''}`}
+              className={`indicator ${isActive(index) ? "active" : ""}`}
               onClick={() => handleIndicatorClick(index)}
             />
           ))}
