@@ -84,7 +84,7 @@ body{
     margin-left: 2%;
 }
 
-.resume {
+/* .resume {
     width: 165px;
     height: 62px;
     cursor: pointer;
@@ -113,7 +113,7 @@ body{
     transform: scale(0.9) rotate(3deg);
     background: radial-gradient(circle farthest-corner at 10% 20%,rgba(2, 245, 255, 1) 50.2%, rgba(255, 94, 247, 1) 37.8%);
     transition: 0.5s;
-}
+} */
 
 .resume{
     margin: 2% 50%  3%;
