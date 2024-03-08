@@ -272,23 +272,23 @@ ul li {
 
 @keyframes colorChange {
     0% {
-        color: red;
-    }
-
-    25% {
         color: whitesmoke;
     }
 
+    /* 25% {
+        color: whitesmoke;
+    } */
+
     50% {
-        color: rgb(219, 219, 10);
+        color: black;
     }
 
-    75% {
+    /* 75% {
         color:#090909;
-    }
+    } */
 
     100% {
-        color: blue;
+        color: whitesmoke;
     }
 }
 
