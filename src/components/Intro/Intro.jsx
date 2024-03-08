@@ -44,7 +44,7 @@ function Intro() {
           stack called MERN (MongoDB, Express.js, React, Node.js). Let's create
           something awesome together!
         </p>
-        <button className="glow-on-hover" onClick={handleResumeClick}>
+        <button className="resume glow-on-hover" onClick={handleResumeClick}>
           View / Download Resume
         </button>
       </div>
