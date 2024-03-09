@@ -26,14 +26,14 @@ function App() {
     //   "sourceCode": "https://github.com/Vishnu-D-2002/URL-Short-FE",
     //   "liveDemo": "https://main--spiffy-medovik-29bd79.netlify.app/"
     // },
-    {
-      "title": "Login Authentication",
-      "description": "Enhance your applications with secure user authentication and authorization features. This project utilizes Axios for seamless and reliable user management, integrated with React and Node.js.",
-      "toolsUsed": ["Axios", "React", "Node.js"],
-      "image": "https://i.postimg.cc/JnXGS7Sr/login.png",
-      "sourceCode": "https://github.com/Vishnu-D-2002/PWD_RST_FE",
-      "liveDemo": "https://main--deft-fudge-828488.netlify.app/"
-    },
+    // {
+    //   "title": "Login Authentication",
+    //   "description": "Enhance your applications with secure user authentication and authorization features. This project utilizes Axios for seamless and reliable user management, integrated with React and Node.js.",
+    //   "toolsUsed": ["Axios", "React", "Node.js"],
+    //   "image": "https://i.postimg.cc/JnXGS7Sr/login.png",
+    //   "sourceCode": "https://github.com/Vishnu-D-2002/PWD_RST_FE",
+    //   "liveDemo": "https://main--deft-fudge-828488.netlify.app/"
+    // },
     {
       "title": "Rest Countries Weather",
       "description": "Discover detailed information about countries and regions around the world. This interactive explorer, developed with DOM , Node.js and powered by the REST Countries API, allows users to explore diverse geographical and cultural data.",
