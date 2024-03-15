@@ -189,3 +189,23 @@
 .sliderButton.right {
     right: 10px;
 }
+
+.categories {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.categories button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.categories button.active {
+    background-color: #0056b3;
+}
