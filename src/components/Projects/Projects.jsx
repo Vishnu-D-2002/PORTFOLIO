@@ -82,7 +82,7 @@ const Projects = ({ projects }) => {
 
     animationTimeoutRef.current = setTimeout(() => {
       animationRef.current = requestAnimationFrame(animate);
-    }, 3000);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -119,7 +119,7 @@ const Projects = ({ projects }) => {
             Mini Project
           </button>
         </div>
-        
+
         <div className="containerProject">
           {Array.from({ length: cardsToShow }).map((_, index) => {
             const projectIndex = (startIndex + index) % totalCards;
