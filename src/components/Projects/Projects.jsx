@@ -82,7 +82,7 @@ const Projects = ({ projects }) => {
 
     animationTimeoutRef.current = setTimeout(() => {
       animationRef.current = requestAnimationFrame(animate);
-    }, 5000);
+    }, 8000);
   };
 
   useEffect(() => {
