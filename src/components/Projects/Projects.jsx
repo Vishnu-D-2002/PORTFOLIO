@@ -82,7 +82,7 @@ const Projects = ({ projects }) => {
 
     animationTimeoutRef.current = setTimeout(() => {
       animationRef.current = requestAnimationFrame(animate);
-    }, 8000);
+    }, 5000);
   };
 
   useEffect(() => {
@@ -123,26 +123,27 @@ const Projects = ({ projects }) => {
         <div className="containerProject">
           {Array.from({ length: cardsToShow }).map((_, index) => {
             const projectIndex = (startIndex + index) % totalCards;
+            const project = filteredProjects[projectIndex];
             return (
               <div key={index} className="cardProject">
                 <div className="BoxProject">
                   <img
-                    src={filteredProjects[projectIndex].image}
+                    src={project.image}
                     alt={`Project ${projectIndex + 1}`}
                   />
                 </div>
                 <div className="detailsProject">
-                  <h2>{filteredProjects[projectIndex].title}</h2>
-                  <p>{filteredProjects[projectIndex].description}</p>
+                  <h2>{project.title}</h2>
+                  <p>{project.description}</p>
                   <div>
                     <h3>
                       <strong>Tools Used:</strong>
                     </h3>{" "}
-                    {filteredProjects[projectIndex].toolsUsed.join(", ")}
+                    {project.toolsUsed.join(", ")}
                   </div>
                   <div className="buttons">
                     <a
-                      href={filteredProjects[projectIndex].sourceCode}
+                      href={project.sourceCode}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn1"
@@ -150,7 +151,7 @@ const Projects = ({ projects }) => {
                       Source Code
                     </a>
                     <a
-                      href={filteredProjects[projectIndex].liveDemo}
+                      href={project.liveDemo}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn1"
