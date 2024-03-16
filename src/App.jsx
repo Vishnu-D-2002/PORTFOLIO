@@ -187,8 +187,8 @@ function App() {
       <Navbar />
       <Intro />
       <About />
-      <Projects projects={ projects } />
       <Skills />
+      <Projects projects={ projects } />
       <Education />
       <Certification />
       <Contact />

@@ -116,7 +116,7 @@ body{
 } */
 
 .resume{
-    margin: 2% 50%  3%;
+    margin: 3% auto;
 }
 
 @keyframes scaleUp {

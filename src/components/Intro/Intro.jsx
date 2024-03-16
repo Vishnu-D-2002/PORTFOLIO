@@ -28,7 +28,7 @@ function Intro() {
 
   const handleResumeClick = () => {
     const resumeUrl =
-      "https://drive.google.com/file/d/1KL6bDFg7O7D1ZetZe8motBBgzBgwV349/view?usp=drivesdk";
+      "https://drive.google.com/file/d/1L20PPZlm-YxITpMMqcxFq6JRyQ8pLZtT/view?usp=drivesdk"; 
     
     window.open(resumeUrl, '_blank'); 
   };
@@ -44,15 +44,17 @@ function Intro() {
           stack called MERN (MongoDB, Express.js, React, Node.js). Let's create
           something awesome together!
         </p>
-        <button className="resume glow-on-hover" onClick={handleResumeClick}>
-          View / Download Resume
-        </button>
+        <div style={{display:'flex'}}>
+          <button className="resume glow-on-hover" onClick={handleResumeClick}>
+            View / Download Resume
+          </button>
+        </div>
       </div>
-      <div id="right-content">
+      {/* <div id="right-content">
         <div id="end">
           <img src="/images/vishnu.png" alt="" className="rounded-image" />
         </div>
-      </div>
+      </div> */}
     </section>
   ); 
 }
