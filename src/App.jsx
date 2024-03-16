@@ -61,7 +61,6 @@ function App() {
       liveDemo:
         "https://main--enchanting-swan-189083.netlify.app/task-11/weather_display.html",
       type: "miniproject",
-      type: "miniproject",
     },
     {
       title: "Tic Tac Toe Game",
