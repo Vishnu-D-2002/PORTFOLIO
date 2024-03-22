@@ -6,19 +6,19 @@ const Projects = ({ projects }) => {
   const [startIndex, setStartIndex] = useState(0);
   const [category, setCategory] = useState("all");
   const containerRef = useRef(null);
-  const animationRef = useRef(null);
-  const animationTimeoutRef = useRef(null);
 
-  const screenWidth = window.innerWidth;
+  // const screenWidth = window.innerWidth;
 
-  let cardsToShow, numIndicators;
-  if (screenWidth < 755) {
-    cardsToShow = 1;
-  } else if (screenWidth >= 755 && screenWidth < 1140) {
-    cardsToShow = 2;
-  } else {
-    cardsToShow = 3;
-  }
+  let cardsToShow=1;
+  // if (screenWidth < 755) {
+  //   cardsToShow = 1;
+  // }
+  // else if (screenWidth >= 755 && screenWidth < 1140) {
+  //   cardsToShow = 2;
+  // }
+  // else {
+  //   cardsToShow = 2;
+  // }
 
   const filteredProjects =
     category === "all"
@@ -26,7 +26,7 @@ const Projects = ({ projects }) => {
       : projects.filter((project) => project.type === category);
 
   const totalCards = filteredProjects.length;
-  numIndicators = Math.ceil(totalCards / cardsToShow);
+  const numIndicators =totalCards;
 
   const nextSlide = () => {
     setStartIndex((prevIndex) => (prevIndex + 1) % totalCards);
@@ -50,50 +50,6 @@ const Projects = ({ projects }) => {
     const end = start + cardsToShow;
     return startIndex >= start && startIndex < end;
   };
-
-  useEffect(() => {
-    const container = containerRef.current;
-
-    const handleMouseEnter = () => {
-      cancelAnimationFrame(animationRef.current);
-      clearTimeout(animationTimeoutRef.current);
-    };
-
-    const handleMouseLeave = () => {
-      startAnimation();
-    };
-
-    container.addEventListener("mouseenter", handleMouseEnter);
-    container.addEventListener("mouseleave", handleMouseLeave);
-
-    return () => {
-      container.removeEventListener("mouseenter", handleMouseEnter);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
-
-  const startAnimation = () => {
-    const container = containerRef.current;
-
-    const animate = () => {
-      nextSlide();
-      animationRef.current = requestAnimationFrame(animate);
-    };
-
-    animationTimeoutRef.current = setTimeout(() => {
-      animationRef.current = requestAnimationFrame(animate);
-    }, 5000);
-  };
-
-  useEffect(() => {
-    const container = containerRef.current;
-    startAnimation();
-
-    return () => {
-      clearTimeout(animationTimeoutRef.current);
-      cancelAnimationFrame(animationRef.current);
-    };
-  }, [startIndex]);
 
   return (
     <section id="projects">
@@ -126,19 +82,19 @@ const Projects = ({ projects }) => {
             const project = filteredProjects[projectIndex];
             return (
               <div key={index} className="cardProject">
-                <div className="BoxProject">
-                  <img
-                    src={project.image}
-                    alt={`Project ${projectIndex + 1}`}
-                  />
-                </div>
+                <h2 style={{textAlign:'center'}}>{project.title}</h2>
+                <img
+                  style={{width:'250px', height:'150px',marginLeft:'13%'}}
+                  src={project.image}
+                  alt={`Project ${projectIndex + 1}`}
+                  className="projectImage"
+                />
                 <div className="detailsProject">
-                  <h2>{project.title}</h2>
                   <p>{project.description}</p>
                   <div>
-                    <h3>
+                    <h3 style={{marginBottom:'5px'}}>
                       <strong>Tools Used:</strong>
-                    </h3>{" "}
+                    </h3>
                     {project.toolsUsed.join(", ")}
                   </div>
                   <div className="buttons">
