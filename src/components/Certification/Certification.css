@@ -171,3 +171,10 @@
     width: 100%;
 }
 
+.sliderButton.left1 {
+    left: 10px;
+}
+
+.sliderButton.right1 {
+    right: 10px;
+}

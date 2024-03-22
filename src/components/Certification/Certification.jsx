@@ -149,10 +149,10 @@ function Certification() {
         </div>
         {totalCards > 1 && (
           <>
-            <button className="sliderButton left" onClick={prevSlide}>
+            <button className="sliderButton left1" onClick={prevSlide}>
               <FaArrowLeft />
             </button>
-            <button className="sliderButton right" onClick={nextSlide}>
+            <button className="sliderButton right1" onClick={nextSlide}>
               <FaArrowRight />
             </button>
           </>
