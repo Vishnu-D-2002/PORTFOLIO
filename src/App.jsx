@@ -24,7 +24,7 @@ function App() {
       title: "Resume Builder",
       description:
         "Create and customize professional resumes effortlessly with a feature-rich resume builder. Tailor your resume to stand out with various templates and styling options. Powered by React, Redux, MongoDB and Node.js.",
-      toolsUsed: ["React", "Redux", "MongoDB", "Node.js"],
+      toolsUsed: ["React", "Redux", "MongoDB", "Node.js","Express.js"],
       image: "https://i.postimg.cc/GmDVBW0B/resume.png",
       sourceCode:
         "https://github.com/Vishnu-D-2002/Dynamic_Portfolio_-_Export_PDF-FE-",

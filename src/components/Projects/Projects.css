@@ -132,6 +132,16 @@
     right: 10px;
 }
 
+@media (min-width: 868px) {
+    .sliderButton.left {
+            left: 20%;
+        }
+    
+        .sliderButton.right {
+            right: 20%;
+        }
+}
+
 .categories {
     display: flex;
     justify-content: center;

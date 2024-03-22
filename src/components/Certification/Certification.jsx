@@ -58,44 +58,44 @@ function Certification() {
     return startIndex >= start && startIndex < end;
   };
 
-  useEffect(() => {
-    const container = containerRef.current;
+  // useEffect(() => {
+  //   const container = containerRef.current;
 
-    const handleMouseEnter = () => {
-      setIsPaused(true); // Pause animation on mouse enter
-    };
+  //   const handleMouseEnter = () => {
+  //     setIsPaused(true); // Pause animation on mouse enter
+  //   };
 
-    const handleMouseLeave = () => {
-      setIsPaused(false); // Resume animation on mouse leave
-    };
+  //   const handleMouseLeave = () => {
+  //     setIsPaused(false); // Resume animation on mouse leave
+  //   };
 
-    container.addEventListener("mouseenter", handleMouseEnter);
-    container.addEventListener("mouseleave", handleMouseLeave);
+  //   container.addEventListener("mouseenter", handleMouseEnter);
+  //   container.addEventListener("mouseleave", handleMouseLeave);
 
-    return () => {
-      container.removeEventListener("mouseenter", handleMouseEnter);
-      container.removeEventListener("mouseleave", handleMouseLeave);
-    };
-  }, []);
+  //   return () => {
+  //     container.removeEventListener("mouseenter", handleMouseEnter);
+  //     container.removeEventListener("mouseleave", handleMouseLeave);
+  //   };
+  // }, []);
 
-  useEffect(() => {
-    const container = containerRef.current;
+  // useEffect(() => {
+  //   const container = containerRef.current;
 
-    const startAnimation = () => {
-      if (!isPaused) {
-        // Check if animation is paused
-        nextSlide();
-        animationRef.current = requestAnimationFrame(startAnimation);
-      }
-    };
+  //   const startAnimation = () => {
+  //     if (!isPaused) {
+  //       // Check if animation is paused
+  //       nextSlide();
+  //       animationRef.current = requestAnimationFrame(startAnimation);
+  //     }
+  //   };
 
-    const handle = setTimeout(startAnimation, 3000);
+  //   const handle = setTimeout(startAnimation, 3000);
 
-    return () => {
-      clearTimeout(handle);
-      cancelAnimationFrame(animationRef.current);
-    };
-  }, [startIndex, isPaused]);
+  //   return () => {
+  //     clearTimeout(handle);
+  //     cancelAnimationFrame(animationRef.current);
+  //   };
+  // }, [startIndex, isPaused]);
 
   return (
     <section id="certification">
