@@ -23,7 +23,7 @@ function App() {
     {
       title: "Resume Builder",
       description:
-        "Create and customize professional resumes effortlessly with a feature-rich resume builder. Tailor your resume to stand out with various templates and styling options. Powered by React, Redux, MongoDB and Node.js.",
+        "Create and customize professional resumes effortlessly with a feature-rich resume builder. Tailor your resume to stand out with various templates and styling options.",
       toolsUsed: ["React", "Redux", "MongoDB", "Node.js","Express.js"],
       image: "https://i.postimg.cc/GmDVBW0B/resume.png",
       sourceCode:
@@ -32,7 +32,7 @@ function App() {
       type: "fullstack",
     },
     {
-      title: "CRM (Customer Relationship Management) System",
+      title: "CRM System",
       description:
         "Create a CRM system to manage customer interactions, sales, leads, and customer data. Implement features such as customer profiles, task tracking, and email integration.",
       toolsUsed: ["Node.js", "Express", "MongoDB", "React"],
@@ -119,7 +119,7 @@ function App() {
     {
       title: "Holiday Explorer",
       description:
-        "Explore holidays and celebrations around the world with the Holiday Explorer app. Discover festive traditions, dates, and customs from different countries. Developed using DOM , Node.js and integrated with the Holiday API for up-to-date and diverse holiday data.",
+        "Explore holidays and celebrations around the world with the Holiday Explorer app. Discover festive traditions, dates, and customs from different countries using DOM , Node.js and integrated with the Holiday API.",
       toolsUsed: ["DOM", "Node.js", "Holiday API"],
       image: "https://i.postimg.cc/bNx1sgCy/holiday.png",
       sourceCode:
